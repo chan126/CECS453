@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login"
+    tools:context=".SignUp"
     android:paddingLeft="@android:dimen/app_icon_size"
     android:paddingRight="@android:dimen/app_icon_size"
-    android:paddingTop="@android:dimen/app_icon_size">
+    android:paddingTop="@android:dimen/app_icon_size"
+    android:paddingBottom="@android:dimen/app_icon_size">
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:hint="Username"/>
@@ -27,37 +26,49 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username"
+        android:layout_marginTop="15dp"
         android:hint="Password"/>
 
-    <Button
-        android:id="@+id/signup"
-        android:layout_width="120dp"
+    <EditText
+        android:id="@+id/re_type_password"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        android:text="Sign Up"/>
+        android:layout_marginTop="15dp"
+        android:hint="Retype Password"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/re_type_password"
+        android:layout_marginTop="15dp"
+        android:hint="Email"
+        />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:layout_marginTop="15dp"
+        android:hint="Phone"
+        />
 
     <Button
-        android:id="@+id/login"
-        android:layout_width="120dp"
+        android:id="@+id/sign_me_up"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.395"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        android:text="Log in"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="165dp" />
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="Sign Me Up!"
+        android:textColor="@android:color/white"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
