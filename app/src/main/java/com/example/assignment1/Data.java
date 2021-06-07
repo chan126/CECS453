@@ -18,24 +18,36 @@ public class Data {
     }
 
     // This method adds a new username and password to the hashmap
-    public void AddCredential(String username, String password){
+    public void addCredential(String username, String password){
         hmCredentials.put(username, password);
     }
 
-    // This method checks if username exists in the hashmap
-    public Boolean CheckUsername(String username){
-        Boolean  retval = true;
-        // Write your code here
+    /**
+     * Returns true if username exists in hashmap
+     * @param username string username that was entered by user
+     * @return true if username key value exists in hashmap, otherwise false
+     */
+    public Boolean checkUsername(String username){
+        Boolean retval = true;
+
+        retval = hmCredentials.containsKey(username);
 
         return retval;
     }
 
     // This method checks a username and password combination is correct!
-    public Boolean CheckCredentials(String username, String Password){
-        Boolean  retval = true;
-        // Write your code here
+    public Boolean checkCredentials(String username, String password){
+        Boolean retval = true;
+        if (this.checkUsername(username)) {
+            if (hmCredentials.get(username).equals(password)) {
+                retval = true;
+            } else {
+                retval = false;
+            }
+        } else {
+            retval = false;
+        }
 
         return retval;
     }
-
 }
