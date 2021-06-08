@@ -48,6 +48,7 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(context, Welcome.class);
                 intent.putExtra("USERNAME", inputUsername);
                 startActivity(intent);
+
             } else {
                 Toast.makeText
                         (context, "Username and/or password invalid.\nTry again", Toast.LENGTH_LONG).
