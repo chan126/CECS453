@@ -35,7 +35,12 @@ public class Data {
         return retval;
     }
 
-    // This method checks a username and password combination is correct!
+    /**
+     * Returns true if username with matching password value exists in hashmap
+     * @param username inputted username
+     * @param password inputted password
+     * @return true if username with matching password value exists in hashmap
+     */
     public Boolean checkCredentials(String username, String password){
         Boolean retval = true;
         if (this.checkUsername(username)) {
