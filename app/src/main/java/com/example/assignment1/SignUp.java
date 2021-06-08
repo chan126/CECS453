@@ -40,7 +40,7 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 boolean validated = error_check();
                 //if no error, go to the login activity
-                if ( validated == true) {
+                if (validated == true) {
                     sign_user_up.addCredential(username.getText().toString(), password.getText().toString());
 
                     //sign_user_up.print_hashmap(); //change to public to print this
