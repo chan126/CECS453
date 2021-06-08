@@ -80,22 +80,24 @@ public class SignUp extends AppCompatActivity {
             validate = false;
         }
 
-        if(retype_password.getText().toString() != password.getText().toString()){
+        if(!retype_password.getText().toString().equals(password.getText().toString()) ){
             retype_password.setError("Password does not match");
-        } else {
+            validate = false;
+        } else{
             retype_password.setError(null);
         }
 
         if(username.getText().toString().isEmpty()){
             username.setError("Please enter a user name");
             validate = false;
-        } else {
+        }else{
             username.setError(null);
         }
 
         if(!android.util.Patterns.PHONE.matcher( phone.getText().toString() ).matches() || phone.getText().toString().isEmpty()){
             phone.setError("Please enter correct phone number");
-        } else {
+            validate = false;
+        }else{
             phone.setError(null);
         }
 
