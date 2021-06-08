@@ -14,7 +14,7 @@ public class Welcome extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         Intent intent = getIntent();
-        String username = intent.getStringExtra(Login.USERNAME);
+        String username = intent.getExtras().getString("USERNAME");
 
         TextView textView = findViewById(R.id.txtWelcome);
         String welcomeMessage = "Welcome " + username + "!";

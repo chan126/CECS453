@@ -10,7 +10,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
-    public static final String USERNAME = "com.example.assignment1.Login";
     private Button btnLogin;
     private Button btnSignUp;
     private EditText editTextUsername;
