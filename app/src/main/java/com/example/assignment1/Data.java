@@ -50,4 +50,12 @@ public class Data {
 
         return retval;
     }
+    private void print_hashmap(){
+        for (String name: hmCredentials.keySet()) {
+            String key = name.toString();
+            String value = hmCredentials.get(name).toString();
+            System.out.println(key + " " + value);
+        }
+
+    }
 }

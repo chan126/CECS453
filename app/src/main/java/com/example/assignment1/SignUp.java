@@ -40,6 +40,9 @@ public class SignUp extends AppCompatActivity {
                 //if no error, go to the login activity
                 if( validated == true){
                     sign_user_up.addCredential(username.getText().toString(), password.getText().toString());
+
+                    //sign_user_up.print_hashmap(); //change to public to print this
+
                     Intent intent = new Intent(getApplicationContext(), Login.class);
                     startActivity(intent);
                 } else{
