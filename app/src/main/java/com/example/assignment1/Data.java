@@ -7,7 +7,7 @@ public class Data {
     // A hashmap data structure for holding usernames and passwords pair
     HashMap <String, String> hmCredentials;
 
-    public Data(){
+    public Data() {
 
         hmCredentials = new HashMap<>();
 
@@ -18,7 +18,7 @@ public class Data {
     }
 
     // This method adds a new username and password to the hashmap
-    public void addCredential(String username, String password){
+    public void addCredential(String username, String password) {
         hmCredentials.put(username, password);
     }
 
@@ -27,7 +27,7 @@ public class Data {
      * @param username string username that was entered by user
      * @return true if username key value exists in hashmap, otherwise false
      */
-    public Boolean checkUsername(String username){
+    public Boolean checkUsername(String username) {
         Boolean retval = true;
 
         retval = hmCredentials.containsKey(username);
@@ -41,7 +41,7 @@ public class Data {
      * @param password inputted password
      * @return true if username with matching password value exists in hashmap
      */
-    public Boolean checkCredentials(String username, String password){
+    public Boolean checkCredentials(String username, String password) {
         Boolean retval = true;
         if (this.checkUsername(username)) {
             if (hmCredentials.get(username).equals(password)) {
@@ -55,7 +55,8 @@ public class Data {
 
         return retval;
     }
-    private void print_hashmap(){
+
+    private void print_hashmap() {
         for (String name: hmCredentials.keySet()) {
             String key = name.toString();
             String value = hmCredentials.get(name).toString();

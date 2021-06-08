@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import static com.example.assignment1.Login.data;
+
 public class SignUp extends AppCompatActivity {
 
     EditText username, password, retype_password, email, phone;
@@ -29,7 +31,7 @@ public class SignUp extends AppCompatActivity {
         phone = findViewById(R.id.phone);
         Button sign_me_up = findViewById(R.id.sign_me_up);
 
-        Data sign_user_up = new Data();
+        Data sign_user_up = data;
 
 
 
@@ -38,21 +40,18 @@ public class SignUp extends AppCompatActivity {
             public void onClick(View v) {
                 boolean validated = error_check();
                 //if no error, go to the login activity
-                if( validated == true){
+                if ( validated == true) {
                     sign_user_up.addCredential(username.getText().toString(), password.getText().toString());
 
                     //sign_user_up.print_hashmap(); //change to public to print this
 
                     Intent intent = new Intent(getApplicationContext(), Login.class);
                     startActivity(intent);
-                } else{
+                } else {
                     Toast.makeText(getApplicationContext(), "Please check errors", Toast.LENGTH_LONG).show();
                 }
-
             }
         });
-
-
     }
 
     /*
@@ -83,20 +82,20 @@ public class SignUp extends AppCompatActivity {
 
         if(retype_password.getText().toString() != password.getText().toString()){
             retype_password.setError("Password does not match");
-        } else{
+        } else {
             retype_password.setError(null);
         }
 
         if(username.getText().toString().isEmpty()){
             username.setError("Please enter a user name");
             validate = false;
-        }else{
+        } else {
             username.setError(null);
         }
 
         if(!android.util.Patterns.PHONE.matcher( phone.getText().toString() ).matches() || phone.getText().toString().isEmpty()){
             phone.setError("Please enter correct phone number");
-        }else{
+        } else {
             phone.setError(null);
         }
 

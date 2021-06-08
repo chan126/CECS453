@@ -17,7 +17,7 @@ public class Login extends AppCompatActivity {
     private EditText editTextPassword;
     private String inputUsername;
     private String inputPassword;
-    private Data data;
+    public static Data data = new Data();
     Context context;
 
     @Override
@@ -32,8 +32,6 @@ public class Login extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
 
         context = getApplicationContext();
-
-        data = new Data();
 
         btnLogin.setOnClickListener(v -> {
             inputUsername = editTextUsername.getText().toString();
