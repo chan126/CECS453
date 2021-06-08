@@ -12,7 +12,6 @@ public class Data {
         hmCredentials = new HashMap<>();
 
         // Adding some items into the hashmap table
-
         hmCredentials.put("AJ", "CoolDude1");
         hmCredentials.put("test", "1234");
     }
@@ -56,12 +55,12 @@ public class Data {
         return retval;
     }
 
+    // print hashmap for testing purposes only
     private void print_hashmap() {
         for (String name: hmCredentials.keySet()) {
             String key = name.toString();
             String value = hmCredentials.get(name).toString();
             System.out.println(key + " " + value);
         }
-
     }
 }

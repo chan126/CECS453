@@ -31,13 +31,13 @@ public class SignUp extends AppCompatActivity {
         phone = findViewById(R.id.phone);
         Button sign_me_up = findViewById(R.id.sign_me_up);
 
+        // get static data object from Login.java
         Data sign_user_up = data;
-
-
 
         sign_me_up.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                // check text fields for validation
                 boolean validated = error_check();
                 //if no error, go to the login activity
                 if (validated == true) {
@@ -54,9 +54,10 @@ public class SignUp extends AppCompatActivity {
         });
     }
 
-    /*
-    check if there is any from any of the textboxes in this activty
-    if no error, proceed to login
+
+    /**
+     * @return true if all text boxes contain valid data in correct format, as well as if password
+     * field and retyped password fields match
      */
     private boolean error_check(){
 

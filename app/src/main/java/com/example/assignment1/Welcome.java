@@ -13,11 +13,16 @@ public class Welcome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
+        // get intent from calling method
         Intent intent = getIntent();
+
+        // get username from intent
         String username = intent.getExtras().getString("USERNAME");
 
         TextView textView = findViewById(R.id.txtWelcome);
         String welcomeMessage = "Welcome " + username + "!";
+
+        // display welcome message
         textView.setText(welcomeMessage);
     }
 }
